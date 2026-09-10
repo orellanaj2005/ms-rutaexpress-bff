@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: bff
+  config:
+    import: optional:file:.env[.properties]
+
+server:
+  port: 8080
+
+security:
+  jwt:
+    issuer-uri: https://login.microsoftonline.com/${TENANT_ID}/v2.0
+    audience: ${API_CLIENT_ID}
+
+services:
+  shipments-url: ${SHIPMENTS_URL:http://localhost:8081}
+  catalog-url: ${CATALOG_URL:http://localhost:8082}
