@@ -31,4 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### RutaExpress ###
 .env
+application-local.yml
+application-local.properties
