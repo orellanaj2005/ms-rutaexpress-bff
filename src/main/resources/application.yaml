@@ -13,5 +13,7 @@ security:
     audience: ${API_CLIENT_ID}
 
 services:
-  shipments-url: ${SHIPMENTS_URL:http://localhost:8081}
-  catalog-url: ${CATALOG_URL:http://localhost:8082}
+  shipments-url: ${SHIPMENTS_URL:http://shipments-svc:8081}
+  catalog-url: ${CATALOG_URL:http://catalog-svc:8082}
+  audit-url: ${AUDIT_URL:http://audit-svc:8083}
+  report-url: ${REPORT_URL:http://report-svc:8084}

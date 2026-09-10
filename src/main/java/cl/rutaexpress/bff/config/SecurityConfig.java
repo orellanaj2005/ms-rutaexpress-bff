@@ -33,6 +33,8 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/catalog/**").hasAnyAuthority("Admin", "Operador")
                 .requestMatchers("/api/shipments/**").hasAnyAuthority("Admin", "Operador", "Cliente")
+                .requestMatchers("/api/audit/**").hasAnyAuthority("Admin", "Auditor")
+                .requestMatchers("/api/report/**").hasAuthority("Admin")
                 .anyRequest().authenticated()
             )
             .oauth2ResourceServer(oauth2 -> oauth2
