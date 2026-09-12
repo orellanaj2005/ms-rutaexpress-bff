@@ -17,3 +17,5 @@ services:
   catalog-url: ${CATALOG_URL:http://catalog-svc:8082}
   audit-url: ${AUDIT_URL:http://audit-svc:8083}
   report-url: ${REPORT_URL:http://report-svc:8084}
+  rabbitmq-admin-url: ${RABBITMQ_ADMIN_URL:http://rabbitmq-admin-svc:8085}
+  kafka-admin-url: ${KAFKA_ADMIN_URL:http://kafka-admin-svc:8086}

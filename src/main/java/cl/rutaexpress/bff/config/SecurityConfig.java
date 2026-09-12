@@ -35,6 +35,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/shipments/**").hasAnyAuthority("Admin", "Operador", "Cliente")
                 .requestMatchers("/api/audit/**").hasAnyAuthority("Admin", "Auditor")
                 .requestMatchers("/api/report/**").hasAuthority("Admin")
+                .requestMatchers("/api/rabbitmq/**", "/api/kafka/**").hasAuthority("Admin")
                 .anyRequest().authenticated()
             )
             .oauth2ResourceServer(oauth2 -> oauth2
